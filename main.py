@@ -13,5 +13,9 @@ property_address_list = []
 
 for property in properties:
     property_price_list.append(property.find("span").text)
+    property_url_list.append(property.find("a").get('href'))
+    property_address_list.append(property.find("address").text.strip())
 
-# print(property_price_lists)
+print(property_price_list)
+print(property_url_list)
+print(property_address_list)
