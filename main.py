@@ -1,7 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 listing_url = "https://appbrewery.github.io/Zillow-Clone/"
+google_form = "https://forms.gle/82zM784zaxZDr4EL9"
 response = requests.get(url=listing_url)
 
 soup = BeautifulSoup(response.text, 'html.parser')
